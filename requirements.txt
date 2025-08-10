@@ -1,0 +1,13 @@
+# langchain
+# langchain-ollama
+# langchain-chroma
+# langchain-community
+# unstructured[md]
+
+langchain-ollama
+langchain-chroma
+langchain-community
+unstructured
+unstructured[pdf]
+unstructured[html]
+
