@@ -10,4 +10,5 @@ langchain-community
 unstructured
 unstructured[pdf]
 unstructured[html]
+flask
 

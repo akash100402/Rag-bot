@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,"> <!-- Prevent favicon requests -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IT Infrastructure Assistant</h1>
+            <p class="subtitle">Ask questions about enterprise computing, virtualization, and EUC solutions</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-history" class="chat-history">
+                <div class="message ai-message">
+                    Hello! I'm your IT Infrastructure Assistant. Ask me anything about enterprise computing, virtualization, or end-user computing solutions.
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Type your IT infrastructure question here..."></textarea>
+                <div class="button-group">
+                    <button id="send-btn">Ask</button>
+                    <button id="clear-btn">Clear Chat</button>
+                </div>
+            </div>
+            
+            <div class="status" id="status"></div>
+        </div>
+
+        <footer>
+            <p>Powered by Ollama and ChromaDB | Documents from Dell, Nutanix, and EUC resources</p>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
