@@ -139,7 +139,14 @@ footer {
   font-size: 0.875rem;
   margin-top: 2rem;
 }
+.status{
 
+    color: rgb(10, 164, 4);
+    font-size: 0.875rem;
+    text-align: center;
+    min-height: 1.25rem;
+    margin-top: 0.5rem;
+}
 /* Loading animation */
 .typing-indicator::after {
   content: ".";
