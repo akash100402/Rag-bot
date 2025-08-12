@@ -77,3 +77,8 @@ README.md           # Project documentation
 - The retriever combines information from both local PDFs and specified URLs.
 - If you encounter issues, check that all dependencies are installed and the model is available in Ollama.
 
+# To run
+
+- console use command python app.py (will provide chunk details with meta data)
+- run in web use command python api.py (no chunk or meta details)
+     ---> open localhost:8000 in your browser
