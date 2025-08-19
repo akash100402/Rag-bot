@@ -18,19 +18,7 @@ def pdf_url_rag(
     chunk_size=1000, 
     chunk_overlap=150
 ):
-    """
-    Creates or updates a vector database from PDF files and URLs.
-    Only adds documents that are not already present in the database.
 
-    Args:
-        pdf_directory (str): The path to the folder containing PDF files (can be None if only using URLs).
-        urls (list): List of URLs to scrape (can be None if only using PDFs).
-        db_path (str): The directory to store the Chroma vector database.
-        collection_name (str): Name for the collection.
-        model_name (str): The name of the Ollama embedding model to use.
-        chunk_size (int): The size of each text chunk when splitting documents.
-        chunk_overlap (int): The number of overlapping characters between chunks.
-    """
     start_time = time.time()
     add_documents = not os.path.exists(db_path)
     embeddings = OllamaEmbeddings(model=model_name, base_url=ollama_url)
@@ -87,4 +75,4 @@ def pdf_url_rag(
         existing_ids = set(vector_store.get(include=[])['ids'])
         print(f"Total document chunks in store: {len(existing_ids)}")
 
-    return vector_store.as_retriever(search_kwargs={"k": 5})
+    return vector_store.as_retriever(search_kwargs={"k": 2})
